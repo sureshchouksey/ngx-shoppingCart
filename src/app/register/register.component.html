@@ -1,0 +1,77 @@
+
+<div class="card">
+  <h4 class="card-header">Register</h4>
+  <div class="card-block">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <div class="input-group" [ngClass]="setClassFirstName()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="firstName" formControlName="firstName" placeholder="FirstName" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassLastName()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="lastName" formControlName="lastName" placeholder="LastName" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassUsername()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="phoneNumber" formControlName="phoneNumber" placeholder="phoneNumber" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassEmail()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="email" name="email" formControlName="email" placeholder="Email">
+      </div>
+      <div class="input-group" [ngClass]="setClassPassword()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
+      </div>
+      <div class="input-group" [ngClass]="setClassFlat()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="flatNoBuidlingName" formControlName="flatNoBuidlingName" placeholder="FlatNoBuidlingName" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassStreet()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="streetName" formControlName="streetName" placeholder="StreetName" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassArea()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="area" formControlName="area" placeholder="Area" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassPincode()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="pincode" formControlName="pincode" placeholder="Pincode">
+      </div>
+      <div class="input-group" [ngClass]="setClassCity()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="city" formControlName="city" placeholder="City">
+      </div>
+      <div class="input-group" [ngClass]="setClassState()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="state" formControlName="state" placeholder="State">
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon"></span>
+        <select class="form-control" name="role" formControlName="role">
+          <option value="" selected disabled>Role</option>
+          <option value="user">Agent</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <div class="input-group" >
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="aadharNumber" formControlName="aadharNumber" placeholder="Aadhar Number" autofocus>
+      </div>
+      <div class="input-group" >
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="panNumber" formControlName="panNumber" placeholder="Pan Number">
+      </div>
+      <div class="input-group" >
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="milkType" formControlName="milkType" placeholder="Milk Type">
+      </div>
+      <div class="input-group" >
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="availabilityStatus" formControlName="availabilityStatus" placeholder="Availability Status">
+      </div>
+      <button class="btn btn-primary" type="submit" ><i class="fa fa-user-plus"></i> Register</button>
+    </form>
+  </div>
+</div>

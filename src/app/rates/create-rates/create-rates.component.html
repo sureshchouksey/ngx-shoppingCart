@@ -1,0 +1,22 @@
+
+<div class="card">
+  <h4 class="card-header">Rates</h4>
+  <div class="card-block">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <div class="input-group" [ngClass]="setClassFirstName()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="cowMilkRate" formControlName="cowMilkRate" placeholder="Cow Milk Rate" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassLastName()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="buffaloMilkRate" formControlName="buffaloMilkRate" placeholder="Buffalo Milk Rate" autofocus>
+      </div>
+      <div class="input-group" [ngClass]="setClassUsername()">
+        <span class="input-group-addon"></span>
+        <input class="form-control" type="text" name="deliveryCharge" formControlName="deliveryCharge" placeholder="Delivery Charge" autofocus>
+      </div>
+      
+      <button class="btn btn-primary" type="submit" ><i class="fa fa-user-plus"></i> Save</button>
+    </form>
+  </div>
+</div>

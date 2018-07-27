@@ -1,0 +1,127 @@
+<!--<app-loading [condition]="isLoading"></app-loading>
+<app-toast [message]="toast.message"></app-toast>-->
+<div class="card" >
+  <h4 class="card-header">Search Device</h4>
+  <div class="card-block">
+    <form class="form-inline" [formGroup]="searchForm" (ngSubmit)="search()" style="text-align:center">
+      <div class="form-group">
+          <input class="form-control" type="text" name="username" formControlName="username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="deviceId" formControlName="deviceId" placeholder="DeviceId">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="packageName" formControlName="packageName" placeholder="PackageName">
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!searchForm.valid"><i class="fa fa-search"></i> Search</button>
+    </form>
+  </div>
+</div>  
+<div class="card">
+    <h4 class="card-header">Device List</h4>
+    <!-- <table class="table table-bordered table-striped">
+      <thead class="thead-default">
+        <tr>
+          <th class="w30"><input type="checkbox" name="all" [checked]="isAllChecked()" (change)="checkAll($event)"/></th>
+          <th>User Name</th>
+          <th>Platform</th>
+          <th>DeviceId</th>          
+          <th>Package Name</th>
+          <th>Actions</th>          
+        </tr>
+      </thead>          
+      <tbody >
+        <tr *ngFor="let device of devices">
+          <td class="w30"><input type="checkbox" name="sizecb[]" value="{{device._id}}" [(ngModel)]="device.state"/></td>
+          <td>{{device.username}}</td>
+          <td>{{device.platform}}</td>
+          <td>{{device.deviceId}}</td>        
+          <td>{{device.packageName}}</td>
+          <td>
+            <button class="btn btn-sm btn-warning"><i class="fa fa-eye" (click)="viewDeviceDetail(device._id)"></i> View</button>
+            <button class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteDevice(device)"><i class="fa fa-trash"></i> Delete</button>
+          </td>   
+        </tr>  
+      </tbody>      
+    </table> -->
+
+    <ngx-datatable #table class="material" 
+      [rows]='rows' 
+      [columnMode]="'force'" 
+      [loadingIndicator]="loading" 
+      [headerHeight]="50" 
+      [footerHeight]="50" 
+      [rowHeight]="'auto'" 
+      [scrollbarH]="true"
+
+      [externalSorting]="false" 
+      [externalPaging]="false"
+      [limit]="10" 
+      [sortType]="'multi'"
+      (sort)="onSort($event)" 
+      (page)="onPage($event)">
+
+      <ngx-datatable-column name="UserName" headerClass="table-header" prop="username" >
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Platform" headerClass="table-header" prop="platform">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="DeviceId" headerClass="table-header" prop="deviceId" >
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Package Name" headerClass="table-header" prop="packageName">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+       <ngx-datatable-column name="Action"  headerClass="table-header"  sortable="false">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          {{column.name}}
+        </ng-template>
+        <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex" ngx-datatable-cell-template>
+          <span  (click)="editUser(row)">
+            <!-- <i class="fa fa-edit fa-fw"></i> -->
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
+        </ng-template>
+        <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex" ngx-datatable-cell-template>
+          <span  (click)="viewUser(row)">
+            <!-- <i class="fa fa-edit fa-fw"></i> -->
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
+        </ng-template>
+      </ngx-datatable-column>
+      </ngx-datatable>
+    
+  </div>
+
+
+<div class="card">
+  <h4 class="card-header">Push Notification</h4>
+  <div class="card-block">
+    <form [formGroup]="notificationForm" (ngSubmit)="SendToAll()">      
+      <div class="input-group" [ngClass]="setClassEmail()">
+        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+        <input class="form-control" type="text" name="messageTitle" formControlName="messageTitle" placeholder="Message Title">
+      </div>
+      <div class="input-group" [ngClass]="setClassPassword()">
+        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+        <input class="form-control" type="text" name="messageBody" formControlName="messageBody" placeholder="Message Body">
+      </div>
+      
+      <button class="btn btn-primary" type="submit" ><i class="fa fa-Send"></i> Send Notification</button>
+    </form>
+  </div>
+</div>
+
+<app-device-detail [device]="selectedDevice"></app-device-detail>
+
+<app-notification></app-notification>

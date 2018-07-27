@@ -1,0 +1,41 @@
+<div class="container">
+
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="nav navbar-nav">
+      <a routerLink="/dashboard" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn" >
+        <i class="fa fa-home"></i> Dashboard
+      </a>
+      <a routerLink="/user" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-list" ></i> User
+      </a>
+      <a routerLink="/login" class="nav-item nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn" [routerLinkActiveOptions]="{exact:true}">
+        <i class="fa fa-sign-in"></i> Login 
+      </a>
+      <a routerLink="/register/0/add" class="nav-item nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
+        <i class="fa fa-user-plus"></i> Register
+      </a>
+      
+      <a routerLink="/agent" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-user-plus" ></i> Agent
+      </a>
+      <a routerLink="/order" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-user"></i> Order
+      </a>
+      <a routerLink="/agent" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-user-plus" ></i> Agent
+      </a>
+      <a routerLink="/rates" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-user"></i> Rates
+      </a>
+      <a routerLink="/coupon" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-lock"></i> Coupon
+      </a>
+      <a routerLink="/logout" class="nav-item nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-sign-out"></i> Logout
+      </a>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+</div>

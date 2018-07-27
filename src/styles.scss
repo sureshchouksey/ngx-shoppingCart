@@ -1,0 +1,552 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+
+*{margin:0; padding:0; list-style:none}
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
+html, body {font-family: 'Roboto Condensed', sans-serif; font-size:16px; line-height: 18px}
+input {background: #fff}
+.fl {float: left;}
+.fr {float: right;}
+.btn { background:#008EC0; padding: 6px 30px; text-transform:uppercase}
+a.link {color:#008EC0}
+a.link:hover {text-decoration:underline}
+a.linkRed {color:#a71e22}
+h4 {font-weight: bold; font-size: 18px}
+body label {font-weight: normal; display: block}
+.row {margin-top:10px; margin-bottom:10px}
+.mat-form-field {width: 100%}
+input.mat-input-element, .mat-form-field-type-mat-select, .myAct .customRow .inputBox, .myAct .customRow .selectBox {background: #fff; border-radius: 5px; box-shadow:none; min-height: 35px; width: 100%}
+
+.myAct .customRow .inputBox, .myAct .customRow .selectBox {background: #fff; border-radius: 5px; box-shadow:none; border:1px solid #ccc; min-height: 35px; width: 100%}
+
+.login {background: #EFEFEF;; max-width: 650px; padding:70px 30px 30px 30px; min-height: 450px}
+.forgot {margin-left: 10px}
+.forgot a {text-decoration: none!important; position: relative; top:9px}
+.forgot a:hover {text-decoration:underline!important}
+
+.mat-form-field-appearance-legacy *.div, .mat-form-field-appearance-legacy input, .mat-form-field-infix {
+    padding: 0!important; margin: 0!important; background:#fff
+}
+.siteHead {margin-bottom: 20px}
+.loginP {width: 80%; margin:30px 0}
+
+
+
+.headerBar {background: #fff; height: 190px; font-size:14px; line-height: 18px; margin-bottom:10px}
+
+.footLink li {display: block; float: left; margin: 0 130px 0 0; max-width:190px}
+.footLink li:last-child {margin-right: 0}
+
+.sub li {display: block; float:none; font-size:16px}
+.sub li img {margin:0 10px}
+.sub li a {color:#E1E1E1}
+
+.copyRight .inner, footer {max-width:1150px; display: flex; margin: 0 auto; color: #e1e1e1; font-family: 'Roboto Condensed', sans-serif}
+body .footerbar {padding:15px 0 0; background:#252525; display: flex; height: auto; display: block;}
+.copyRight {background: #F4A830; font-size: 12px}
+.copyRight p {margin: 0}
+.copyRight a {margin: 5px 10px; color: #000}
+
+.footLink h4 {color:#e1e1e1; margin-bottom: 15px}
+.clr {clear: both; overflow: hidden}
+body .copyRight .inner {color:#000; display: block;}
+
+.sideContent  {text-align: right; margin-right: 20px}
+.circle {border:1px solid #A2271F; border-radius: 50%; padding:8px; display: inline-block; height:30px; width:30px;}
+.circle .mat-icon {position:relative; top:-3px; left: -4px; color: #A2271F; font-size:18px}
+.circle span {font-style: normal; position: relative; left:9px; top: -10px;}
+
+body .mat-toolbar-row {height: auto}
+.navbar {background: #145187; padding: 0 10px; border-radius:0; margin:0; min-height: auto; height:40px}
+.navbar button {background: none; border: 0; color: #fff; margin-top: 3px}
+.siteInner .navbar {padding:0}
+.profileBar {background:#008EC0; height:35px!important; margin-bottom:10px}
+.loginSec {display: block; width: 100%}
+
+/*homepage*/
+body .bodyContainer {margin-bottom: 30px}
+.siteInner, .bodyContainer {max-width:1150px; margin: 0 auto; display: block;}
+.heading {font-weight:bold; font-size:26px; margin:0 0 20px ;}
+.informative {margin-bottom:30px }
+.informative p {margin-bottom: 15px; line-height: 25px; font-size:16px}
+.welcmPanel .cell .bg {min-height:335px; background:#f8f8f8; border:1px solid #E4E4E4; line-height: 22px; margin-bottom:15px; padding:20px}
+.imgBox {position: relative; padding:20px}
+.imgBox {position: relative; min-height: 250px; background: #f2f2f2}
+.imgCaption {background:#145187; min-height: 80px; display: inline-block; position: absolute; bottom: 0; left: 0; width: 100%; color: #fff; padding:15px; font-size: 14px}
+
+.imgBox .imgSpan {height:205px; max-width:130%; margin:-20px}
+.topRow {margin-top:20px; margin-bottom: 30px }
+.topRow .imgSpan {height:225px;}
+.topRow .cell {height: 205px; position: relative;}
+.topRow .cell img {width: 350px}
+.topRow .cell .caption {position: absolute; bottom: 0; left:0; padding: 0 20px; color: #fff}
+.imgSpan .caption {position: absolute; left: 0; bottom: 0; width: 100%}
+.imgCaption .btn {background: none; border:1px solid #fff; border-radius: 0}
+.welcmPanel .imgCaption {min-height: 250px; font-size: 24px; line-height: 32px}
+.welcmPanel .imgCaption .btn {position: absolute; bottom: 20px}
+
+.navbar li {display: block; float: left}
+.navbar li:first-child { margin-left:-30px}
+.navbar li a {padding:10px 15px; font-size: 18px; color: #fff; display: block; font-family:  'Roboto Condensed', sans-serif; text-decoration: none; text-transform: uppercase; font-weight: bold; cursor: pointer;}
+.navbar-default .navbar-nav>li>a {color:#fff}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {background:#008EC0; color: #fff}
+
+body .headerBar, body .navbar {margin-bottom: 0}
+body .headerBar, body .navbar-nav {flex-direction: row !important}
+body .headerBar, body .navbar-nav .nav-link {padding-right:10px;}
+
+.headerBar .siteInner {margin-bottom: 20px}
+body .topNav {margin: 0}
+
+.loginPage h4 {font-size: 32px}
+.mat-form-field-infix {border: 0}
+
+.spacer {margin-top:30px}
+.form-login {margin-bottom: 30px}
+.mat-form-field-flex {background: #fff; border-radius: 5px}
+body .profileBar .mat-form-field-appearance-outline .mat-form-field-flex {margin-top: 0}
+.mat-form-field-appearance-outline .mat-form-field-flex input {padding:20px 0; background: #fff}
+.mat-form-field-appearance-outline .mat-form-field-flex .mat-select {padding:12px 0;}
+
+.loginUl li {display: block; float: right; cursor: pointer }
+.loginUl li:hover {text-decoration: underline}
+.loginUl li {display: block; float: left;}
+.loginUl li.profile {width: 35px; height: 30px; position: relative; top:16px; right:20px; color: #fff}
+
+.profile a {color: #fff}
+
+.search .mat-form-field-wrapper {margin: 0}
+.breadcrumb  {background: none!important; max-width: 1150px; margin: 0 auto; padding: 0}
+.breadcrumb>li+li:before {content: "\00bb"!important; color:#DF4A5D }
+
+.searchBox {background:#fff; min-height:40px; padding:5px 10px; border-radius:10px; border:1px solid #f2f2f2; -moz-box-shadow: inset 0 0 5px #000000; -webkit-box-shadow: inset 0 0 5px #000000; box-shadow:inset 0 0 5px #000000; margin-top: 20px}
+.serchBtn  {position: relative; left:-35px; top:10px; background: none; border: 0; padding: 0}
+.serchBtn i {font-size:27px; font-weight: bold}
+
+
+.search .mat-form-field-type-mat-select {background: none; position: relative; top:12px; width: 190px; padding: 0; font-size: 12px}
+.loginSec a.btn {background: none!important; margin-right:30px; padding: 0; font-size: 0}
+.loginSec button.btn {margin-left: 10px; color: #fff}
+body .loginSec .mat-form-field-appearance-outline .mat-form-field-flex .mat-select {padding: 8px 0}
+
+.profPop .inputBox, .selectBox {border: 1px solid #ccc; padding: 3px 5px; min-width:70px; border-radius: 5px}
+.profileBox {min-width:440px}
+.profileBox.dropdown-menu {right:-20px; left: auto!important; padding: 20px 20px 0; color: #333}
+.profileBox.dropdown-menu p.line {border-bottom: 1px solid #ccc; margin-bottom: 0; overflow: hidden; min-height:30px}
+.profileBox.dropdown-menu p a {color:#008EC0; text-decoration: underline}
+.right {text-align: right}
+
+
+.navbar {
+    padding: 15px 10px;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 0 0 20px;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    perspective: 1500px;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #056693;
+    color: #fff;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: bottom left;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+    transform: rotateY(100deg);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding:18px 10px;
+    font-size:16px;
+    display: block; color:#fff; border-bottom: 1px solid #26789E
+}
+#sidebar ul li a:hover {
+    color: #fff;
+    background:#008EC0; text-decoration: none
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #008EC0;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    padding: 0 20px 20px;
+    min-height: 100vh;
+    transition: all 0.3s; width:80%
+}
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition-delay: 0.2s;
+}
+
+#sidebarCollapse span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse span:nth-of-type(2) {
+    opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+
+#sidebarCollapse.active span {
+    transform: none;
+    opacity: 1;
+    margin: 5px auto;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        transform: rotateY(90deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+}
+
+.wrapper nav {background:none;}
+
+
+.bodyContainer fieldset, .bodyContainer fieldset.yellow {border: 1px solid #F5A82F; padding: 20px; margin-bottom: 20px; line-height:25px}
+.bodyContainer fieldset select {width:100%; margin-bottom: 20px}
+.bodyContainer fieldset p {font-size: 14px}
+.bodyContainer fieldset .btn {color: #fff; text-transform:capitalize}
+.bodyContainer fieldset legend {border: 0; width:auto; background: #fff; padding:10px; font-size: 14px; margin-bottom: 0}
+
+ul.numbers li {margin: 20px; padding-left: 20px; list-style: decimal}
+ul.numbers li::before {background: #666; border-radius: 50%; padding: 20px; position: relative; left: -30px; width:30px; height: 30px;}
+
+h5 {font-size:14px; font-weight: bold; margin:20px 0 10px}
+
+/* user summary*/
+.ngx-datatable {border: 1px solid #ccc;}
+.datatable-header-inner {background:#008EC1; padding: 5px; color: #fff; color:#fff}
+
+.datatable-row-even {background: #EBEBEB;min-height: 40px}
+.datatable-row-odd {background: #FFF; min-height: 40px}
+.ngx-datatable .datatable-body-cell {padding: 5px}
+.ngx-datatable .datatable-header {height: auto!important;}
+
+.buttonSet .btn {color: #fff; font-size:16px; padding: 5px 15px; margin: 0 20px 0 0}
+.buttonSet .selectBox {min-height:40px}
+.buttonSet .btn i {position: relative; top:3px; left:-5px}
+.buttonSet .btn span {position: relative; top: -5px}
+
+.buttonSet .pull-right legend { background: #f2f2f2; padding: 2px 10px; font-size: 14px; position: relative; top: 10px; right:20px }
+
+
+body .datatable-header-cell {padding: 0!important; color: #fff!important}
+
+.createUser fieldset {background: #FFFFFF; border: 1px solid #979797; padding: 20px; margin-bottom: 25px}
+.loginPage .login .mat-form-field-flex {padding: 3px 5px; min-width:70px; border-radius: 5px}
+
+.createUser fieldset legend {border:0; display: inline-block; width: auto; background: #fff; padding:0 20px;}
+.createUser h4 { margin-bottom: 25px; color: #008EC1; font-size:20px; text-transform: uppercase}
+
+.grayBg {background: #f2f2f2; padding: 20px}
+body fieldset.note {background: #FFFFFF; border: 1px solid #F5A82F;padding: 20px}
+body fieldset.note legend { color: #DF4A5D}
+.createUser .buttonSet .btn {border: 0}
+
+.card {background: #FFFFFF; box-shadow: 0 1px 8px 0 rgba(0,0,0,0.10); border-radius: 2px; padding:10px 20px 20px; overflow: hidden; margin-bottom: 20px}
+
+/* login page*/
+.loginPage .login { margin: 0 auto; float: none}
+.loginPage h4 {margin-bottom: 20px}
+.loginPage .note {margin-bottom: 25px}
+
+.preLogin .loginPage {margin-top: 25px}
+.preLogin .loginPage .login {margin: auto; float: right;}
+#user_login_loginform a {color: royalblue; text-decoration: underline; cursor: pointer}
+#user_login_loginform a:hover {text-decoration: none}
+
+#sidebar li.head {padding:10px; font-size:16px }
+#sidebar li.head span { float: right; top:-10px; position: relative}
+#sidebar li.head span i {font-size: 40px}
+
+.ngx-datatable.material {box-shadow:none}
+
+.ngx-datatable.material .datatable-header .datatable-header-cell {font-size: 16px; min-height:30px; padding:0 3px}
+.card h3 {font-size: 20px;    color: #008EC1; text-transform: uppercase; margin-bottom: 20px}
+
+
+.noteDiv input {min-height: 80px} 
+
+
+.profPop ul li {display: block; width: 100%; float: none}
+.profPop ul li a {color: #333; font-size: 14px}
+
+.drdPost {width: 180px!important; min-width: auto;}
+.profileBox.dropdown-menu.aftrLogin {width:180px!important; min-width: auto; right:130px}
+
+.view {color:#008EC1}
+.Active {color: green}
+.Inactive {color:red}
+
+
+
+.afterLogin .profileBar .searchPanel { position: relative; top: -9px;}
+.afterLogin .profileBar .username { position: relative; top: -3px;}
+.afterLogin .loginUl li.profile {background: #333; border-radius: 50%; color:#fff}
+.afterLogin .loginUl li .one {position: relative; left: 4px; top: -3px}
+.afterLogin .loginUl li .two {position: relative; left:10px; color: #333}
+
+.name {color:#008EC0}
+.addressDisabled{    pointer-events: none;}
+
+@media only screen and (max-width: 767px) {
+
+
+    .topRow .cell {text-align: center; float: none; margin-bottom: 40px}
+    .serchBtn { top:23px}
+    .navbar li {display: block; float:none}
+    .loginUl li.profile {float:right; margin-left:25px}
+    .profileBox.dropdown-menu {min-width:350px; width:100%}
+    .navbar-form {position:static;}    
+    .sideContent, .sideContent01 {display: none;}
+    .navbar-default .navbar-collapse {background: #f2f2f2; position: relative; z-index: 999999; color: #333}
+    body .navbar-default .navbar-nav > li > a {color: #333}
+    body .navbar-default .navbar-collapse .navbar-form {position: static}
+    body .topNav li:first-child {padding-left: 25px}
+    .navbar-form .form-group, .navbar-form .form-group button {float:left}
+    .navbar-form .form-group button {top:23px}
+}
+
+.navbar-form {position:absolute; top:-95px; right:0;}
+.navbar-form button {color: #333}
+.navbar-form button:hover {background: none}
+
+body .commonField {border:1px solid #ccc; padding:20px}
+.tile {border: 1px solid #ccc; background:#fff; border:1px solid #056693; margin:7px -10px}
+.tile:hover, .tile.select {background:#056693; color: #fff }
+.tile table {width:100%}
+.tile table tr td {height: 150px; vertical-align: middle; text-align: center; text-transform: uppercase}
+
+
+
+#pageTitle {    position: relative;
+    border-left: 8px solid #128ec3; }
+
+H1.page {    line-height: 26px;
+        color: #2f2f2f;
+        padding-left: 10px;
+        font-weight: 700;
+    line-height: 38px}
+
+        .box_round9_shad_right {
+            border: 2px solid #fff;
+            margin: 0px 0px 18px 18px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 9px;
+            -khtml-border-radius: 9px;
+            border-radius: 9px;
+            -moz-box-shadow: 1px 1px 10px #cecece;
+            -webkit-box-shadow: 2px 2px 6px #cecece;
+            box-shadow: 2px 2px 6px #cecece;
+            background-color: #ebebeb;
+            max-width: 300px;
+            float: right;
+        }
+        ol {
+            margin: 0px 0 0 30px;;
+            padding: 0;
+            counter-reset: list;
+            list-style: none;
+        }
+        ol li {padding-left: 20px;list-style: decimal; margin-bottom: 15px; font-size: 14px}
+
+        .informative {line-height: 22px}
+
+
+
+
+        .question {
+            padding-left: 15px;
+            line-height: 24px;
+            /* background: url(images/arrow-toggle.png) 0 9px no-repeat !important; */
+            cursor: pointer;
+            margin-bottom: 0px;
+            color: #104675;
+        }
+
+        h1.Q {
+            font-size: 22px;
+            line-height: 24px;
+            font-family: 'Roboto Condensed', Verdana, Arial, Helvetica, sans serif;
+            font-weight: 700;
+            padding: 0;
+            padding-bottom: 10px;
+        }
+
+        .question > *:before {
+            content: '\f0a9';
+            font-family: "FontAwesome";
+            color: #f1a910;
+            margin: 0;
+            padding: 0;
+            margin-right: 0.75rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .on > *:before {
+            content: '\f0ab';
+            font-family: "FontAwesome";
+            color: #06619a;
+            margin-right: 0.75rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .answer {
+            display: none;
+         
+            line-height: 24px;
+         
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 15px 30px 15px 20px;
+        }
+
+
+        .bullets { margin-left:30px}
+        .bullets li {list-style:disc; padding-left:5px; colo:#333}
+        .mat-select-arrow-wrapper {position: relative; top:8px}
+
+        .actionIcon{ padding:10px}

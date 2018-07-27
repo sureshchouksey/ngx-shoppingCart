@@ -1,0 +1,116 @@
+<div class="card" >
+  <h4 class="card-header">Search Order</h4>
+  <div class="card-block">
+    <form class="form-inline" [formGroup]="searchForm" (ngSubmit)="search()" style="text-align:center">
+      <div class="form-group">
+          <input class="form-control" type="text" name="username" formControlName="username" placeholder="User Name">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="area" formControlName="area" placeholder="Area">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="agentName" formControlName="agentName" placeholder="Agent Name">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="milkType" formControlName="milkType" placeholder="Milk Type">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="deliveryStatusByUser" formControlName="deliveryStatusByUser" placeholder="User Delivery Status">
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!searchForm.valid"><i class="fa fa-search"></i> Search</button>
+      
+    </form>
+    
+  </div>
+</div>
+
+<div class="card">
+    <h4 class="card-header">Order List</h4>
+    
+    <ngx-datatable #table class="material" 
+      [rows]='rows' 
+      [columnMode]="'force'" 
+      [loadingIndicator]="loading" 
+      [headerHeight]="50" 
+      [footerHeight]="50" 
+      [rowHeight]="'auto'" 
+      [scrollbarH]="true"
+
+      [externalSorting]="false" 
+      [externalPaging]="false"
+      [limit]="10" 
+      [sortType]="'multi'"
+      (sort)="onSort($event)" 
+      (page)="onPage($event)">
+
+      <ngx-datatable-column name="UserName" headerClass="table-header" prop="userName" >
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Area" headerClass="table-header" prop="area">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="PhoneNumber" headerClass="table-header" prop="userContactNumber" >
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="AgentName" headerClass="table-header" prop="agentName">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="TotalPrice" headerClass="table-header" prop="totalPrice">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="TotalQuantity" headerClass="table-header" prop="totalQuantity" >
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="FromDate" headerClass="table-header" prop="fromDate">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="ToDate" headerClass="table-header" prop="toDate">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="MilkType" headerClass="table-header" prop="milkType" >
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Delivery Status" headerClass="table-header" prop="deliveryStatusByUser">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{value}}
+        </ng-template>
+      </ngx-datatable-column>
+       <ngx-datatable-column name="Action"  headerClass="table-header"  sortable="false">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          {{column.name}}
+        </ng-template>
+        <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex" ngx-datatable-cell-template>
+          <span  (click)="editUser(row)">
+            <!-- <i class="fa fa-edit fa-fw"></i> -->
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
+        </ng-template>
+        <ng-template let-row="row" let-value="value" let-rowIndex="rowIndex" ngx-datatable-cell-template>
+          <span  (click)="viewUser(row)">
+            <!-- <i class="fa fa-edit fa-fw"></i> -->
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </span>
+        </ng-template>
+      </ngx-datatable-column>
+      </ngx-datatable>
+    
+  </div>
+
